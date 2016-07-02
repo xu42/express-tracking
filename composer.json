@@ -6,7 +6,7 @@
         "express-tracking",
         "快递追踪",
         "快递查询",
-        "快递",
+        "快递"
     ],
     "homepage": "https://github.com/xu42/express-tracking",
     "license": "MIT",
