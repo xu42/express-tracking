@@ -1,0 +1,28 @@
+{
+    "name": "xu42/express-tracking",
+    "description": "express-tracking 快递单号状态追踪",
+    "keywords": [
+        "xu42",
+        "express-tracking",
+        "快递追踪",
+        "快递查询",
+        "快递",
+    ],
+    "homepage": "https://github.com/xu42/express-tracking",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xu42",
+            "homepage": "http://xu42.cn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.5|~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xu42\\express-tracking\\": "src"
+        }
+    }
+}
