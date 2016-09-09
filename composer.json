@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Xu42\\express-tracking\\": "src"
+            "Xu42\\ExpressTracking\\": "src"
         }
     }
 }
