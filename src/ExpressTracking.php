@@ -38,7 +38,8 @@ class ExpressTracking
             return ['status' => '404', 'message' => '未查询到快递状态', 'data' => [], 'url' => $this->urlWap];
         }
         if ($result['message'] == 'ok') {
-            return ['status' => $result['status'], 'state' => $result['state'], 'data' => $result['data'], 'url' => $this->urlWap];
+            $result['url'] = $this->urlWap;
+            return $result;
         }
         return ['status' => $result['status'], 'message' => $result['message'], 'data' => [], 'url' => $this->urlWap];
     }
