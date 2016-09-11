@@ -90,13 +90,22 @@ class ExpressTracking
      */
     private function query()
     {
+
         $type = $this->getComCode();
+
         if ( is_null( $type ) ) {
             return null;
         }
         $result = $this->getQueryResult( $type[0], $this->num );
-        if ( $result['status'] == 201 && count( $type ) >= 2 ) {
-            $result = $this->getQueryResult( $type[1], $this->num );
+        if ($result['status'] == '200'){
+            return $result;
+        }
+
+        if ( $result['status'] == '201' && count( $type ) >= 2 ) {
+            $result1 = $this->getQueryResult( $type[1], $this->num );
+            if ($result1['status'] == '200') {
+                return $result1;
+            }
         }
         return $result;
     }
