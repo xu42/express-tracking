@@ -107,11 +107,11 @@ class ExpressTracking
      * @param $postId
      * @return mixed
      */
-    private function getQueryResult( $type, $postId)
+    private function getQueryResult( $type, $postId )
     {
-        $this->urlQuery = $this->urlQuery . 'type=' . $type . '&postid=' . $postId . '&id=1&valicode=&temp=' . time();
-        $response       = $this->myCurl( $this->urlQuery );
-        $result         = json_decode( $response, true );
+        $url      = $this->urlQuery . 'type=' . $type . '&postid=' . $postId . '&id=1&valicode=&temp=' . time();
+        $response = $this->myCurl( $url );
+        $result   = json_decode( $response, true );
         return $result;
     }
 }
