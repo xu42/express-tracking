@@ -18,11 +18,17 @@
         }
     ],
     "require": {
-        "php" : "~5.5|~7.0"
+        "php" : "~7.0"
     },
     "autoload": {
         "psr-4": {
-            "Xu42\\ExpressTracking\\": "src"
+            "Cn\\Xu42\\ExpressTracking\\": "src"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
         }
     }
 }

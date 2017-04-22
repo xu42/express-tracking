@@ -16,12 +16,7 @@ $ composer require xu42/express-tracking
 
 ## Usage
 
-``` php
-require_once './vendor/autoload.php';
-$number = '';
-$expressTracking = new \Xu42\ExpressTracking\ExpressTracking($number);
-$result = $expressTracking->latestStatus();
-```
+Please see [debug.php](debug.php)
 
 ## Change log
 
