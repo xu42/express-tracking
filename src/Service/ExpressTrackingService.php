@@ -2,7 +2,7 @@
 
 namespace Cn\Xu42\ExpressTracking\Service;
 
-use Cn\Xu42\ExpressTracking\Exception\ETSystemException;
+use Cn\Xu42\ExpressTracking\Exception\SystemException;
 use Cn\Xu42\ExpressTracking\BizImpl\ExpressTrackingBizImpl;
 
 class ExpressTrackingService
@@ -19,14 +19,14 @@ class ExpressTrackingService
      *
      * @param $postId
      * @return array
-     * @throws ETSystemException
+     * @throws SystemException
      */
     public function getComCodes($postId)
     {
         try {
             return $this->bizImpl->getComCodes($postId);
         } catch (\Throwable $throwable) {
-            throw new ETSystemException();
+            throw new SystemException($throwable->getMessage());
         }
     }
 
@@ -36,14 +36,14 @@ class ExpressTrackingService
      * @param $postId
      * @param $comCodes
      * @return array|mixed
-     * @throws ETSystemException
+     * @throws SystemException
      */
     public function query($postId, $comCodes)
     {
         try {
             return $this->bizImpl->query($postId, $comCodes);
         } catch (\Throwable $throwable) {
-            throw new ETSystemException();
+            throw new SystemException($throwable->getMessage());
         }
     }
 

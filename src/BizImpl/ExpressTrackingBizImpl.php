@@ -3,7 +3,7 @@
 namespace Cn\Xu42\ExpressTracking\BizImpl;
 
 use Cn\Xu42\ExpressTracking\Exception\ArgumentException;
-use Cn\Xu42\ExpressTracking\Exception\ETSystemException;
+use Cn\Xu42\ExpressTracking\Exception\SystemException;
 
 class ExpressTrackingBizImpl
 {
@@ -24,7 +24,7 @@ class ExpressTrackingBizImpl
             $comCodes[] = isset($item['comCode']) ? $item['comCode'] : null;
         }
 
-        if (empty($comCodes)) throw new ETSystemException('comCode查询不到');
+        if (empty($comCodes)) throw new SystemException('comCode查询不到');
 
         return $comCodes;
     }
@@ -42,7 +42,7 @@ class ExpressTrackingBizImpl
             if ($result['status'] == '200') break;
         }
 
-        if (empty($result) || $result['message'] != 'ok') throw new ETSystemException('查询不到');
+        if (empty($result) || $result['message'] != 'ok') throw new SystemException('查询不到');
 
         $result['url'] = self::URL_WAP . $postId;
 
