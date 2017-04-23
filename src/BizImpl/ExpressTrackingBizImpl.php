@@ -61,6 +61,7 @@ class ExpressTrackingBizImpl
         curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0');
         $curlResponse = curl_exec($ch);
         curl_close($ch);
+        if ($curlResponse === false) throw new SystemException('网络请求失败');
         return $curlResponse;
     }
 
