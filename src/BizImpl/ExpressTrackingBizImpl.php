@@ -7,9 +7,9 @@ use Cn\Xu42\ExpressTracking\Exception\SystemException;
 
 class ExpressTrackingBizImpl
 {
-    const URL_WAP = 'http://m.kuaidi100.com/result.jsp?from=weixin&nu=';
-    const URL_COM_CODE = 'http://m.kuaidi100.com/autonumber/auto?num=';
-    const URL_QUERY = 'http://m.kuaidi100.com/query?';
+    const URL_WAP = 'https://m.kuaidi100.com/result.jsp?from=weixin&nu=';
+    const URL_COM_CODE = 'https://m.kuaidi100.com/autonumber/auto?num=';
+    const URL_QUERY = 'https://m.kuaidi100.com/query?';
 
 
     public function getComCodes($postId)
